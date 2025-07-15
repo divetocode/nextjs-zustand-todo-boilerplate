@@ -1,4 +1,4 @@
-# 📝 Next.js  Todo Boilerplate 
+# 📝 Next.js Zustand Todo Boilerplate 
 
 A modern, responsive **Todo Dashboard** built with:
 
