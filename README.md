@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Next.js  Todo Boilerplate 
 
-## Getting Started
+A modern, responsive **Todo Dashboard** built with:
 
-First, run the development server:
+- **Next.js 13+ (App Router)**
+- **TypeScript**
+- **Zustand** for global state management
+- **Axios** with custom API client
+- **Tailwind CSS** for styling
+- **Reusable components** (Button, Modal, etc.)
+
+---
+
+## 🚀 Features
+
+✅ Create todos with `title`, `userId`, and `completed` status  
+✅ Display todos in a responsive grid layout  
+✅ Custom `AlertModal` with animation (bottom-to-top transition)  
+✅ Global state via `Zustand`  
+✅ Axios abstraction for API handling  
+✅ Fully responsive & accessible UI
+
+---
+
+## 📁 Folder Structure
+
+├── app/
+│ └── page.tsx # Main Todo Dashboard Page
+├── components/
+│ ├── AddTodoButton.tsx # Reusable styled button
+│ ├── AlertModal.tsx # Animated alert modal
+│ └── ConfirmButton.tsx # Shared confirm button
+├── constants/
+│ └── index.ts # Constants like STR_NULL
+├── libs/
+│ └── axios.ts # Axios instance + helpers
+├── stores/
+│ └── todoStore.ts # Zustand store
+└── styles/
+└── globals.css # TailwindCSS entry
+
+
+## 🛠 Tech Stack
+
+| Tech        | Description                             |
+|-------------|-----------------------------------------|
+| Next.js     | React Framework                         |
+| TypeScript  | Static Typing                           |
+| Zustand     | Lightweight state management            |
+| Axios       | API abstraction layer                   |
+| Tailwind CSS| Utility-first CSS framework             |
+
+---
+
+## 🔧 Custom API Integration
+
+> Uses `https://jsonplaceholder.typicode.com/todos` for demo purposes.
+
+- `GET /todos/1` → Fetches one todo on mount  
+- `POST /todos` → Creates new todo  
+- `id` is manually generated client-side to avoid static `201` from placeholder API
+
+---
+
+## 💡 Components
+
+### ✅ AddTodoButton
+Reusable styled button used for "Add Todo" action.
+
+### ✅ AlertModal
+- Custom modal with `backdrop`, `transition`, and `click-to-dismiss`
+- Used for validation errors (e.g., title required)
+
+---
+
+## 📱 Responsive Layout
+
+- `lg:grid-cols-4` layout
+- Todos displayed in 1~4 columns based on screen size
+- Create form is fixed on the right side (or bottom on mobile)
+
+---
+
+## 🧪 Future Improvements
+
+- [ ] Delete / Toggle todos  
+- [ ] Persist data via localStorage or backend  
+- [ ] Toast notifications  
+- [ ] Unit & E2E tests  
+- [ ] Dark mode support  
+
+---
+
+## 🧑‍💻 Getting Started
 
 ```bash
+git clone https://github.com/divetocode/nextjs-zustand-todo-boilerplate.git
+cd nextjs-zustand-todo-boilerplate
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
