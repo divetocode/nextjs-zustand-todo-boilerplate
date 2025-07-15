@@ -25,19 +25,33 @@ A modern, responsive **Todo Dashboard** built with:
 ## 📁 Folder Structure
 
 ├── app/
+
 │ └── page.tsx # Main Todo Dashboard Page
+
 ├── components/
+
 │ ├── AddTodoButton.tsx # Reusable styled button
+
 │ ├── AlertModal.tsx # Animated alert modal
+
 │ └── ConfirmButton.tsx # Shared confirm button
+
 ├── constants/
+
 │ └── index.ts # Constants like STR_NULL
+
 ├── libs/
+
 │ └── axios.ts # Axios instance + helpers
+
 ├── stores/
+
 │ └── todoStore.ts # Zustand store
+
 └── styles/
+
 └── globals.css # TailwindCSS entry
+
 
 
 ## 🛠 Tech Stack
